@@ -38,5 +38,8 @@ setup(
     zip_safe = False,
     packages = ['bernhard'],
     include_package_data = True,
-    install_requires=['protobuf >= 2.4']
+    package_data = {'': ['*.proto']},
+    install_requires=['pyrobuf'],
+    setup_requires=['pyrobuf'],
+    pyrobuf_modules=['bernhard/proto.proto'],
 )
